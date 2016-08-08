@@ -11,9 +11,6 @@ Package `is` provides some assertions on `reflect.Values` and `reflect.Types`.
 Go's reflect package can sometimes leave one asking basic questions, like
 
 > Is this a zero value?
-
-or
-
 > Is this field exported?
 
 Although there are well-documented ways to answer these kinds of questions,
@@ -21,15 +18,16 @@ discoverability can be hard.
 
 I hope this package comes in handy for quick and dirty assertions, but would
 encourage you to use this code as inspiration to writing your own reflect
-code more accurately and efficiently.
+code accurately and hopefully more efficiently.
 
 ## Is this a zero value?
 
-`is.Zero` checks if a value is equal to the zero value of its underlying type.
+- `is.Zero` checks if a value is equal to the zero value of its underlying type.
+- `is.ZeroForType` checks if a value is equal to the zero value of the provided type.
 
-`is.ZeroForType` checks if a value is equal to the zero value of the provided type.
+These two functions are subtly different, check out [the examples on godoc].
 
-These two functions are subtly different.
+[the examples on godoc]: https://godoc.org/github.com/samsalisbury/is
 
 ## TODO
 
